@@ -1,0 +1,30 @@
+{
+    "name": "mattwellss/mustache-theme",
+    "description": "An example mustache theme",
+    "license": "MIT",
+    "type": "magento-module",
+    "authors": [
+        {
+            "name": "Matthew Wells",
+            "email": "ttamsllew@gmail.com"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "suggest": {
+        "mattwellss/magento-composer-autoloader": "To support namespace-autoloading"
+    },
+    "autoload": {
+        "psr-0": {
+            "MattWellss\\Mustache": "."
+        }
+    },
+    "extra": {
+        "map": [
+            ["design/*", "app/design/frontend/mattwellss/mustache/"],
+            ["MattWellss/Mustache/*", "app/code/community/MattWellss/Mustache/"],
+            ["mattwellss_mustache_theme.xml", "app/etc/mattwellss_mustache_theme.xml"]
+        ]
+    }
+}

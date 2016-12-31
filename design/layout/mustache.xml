@@ -1,0 +1,36 @@
+<layout>
+  <catalog_category_layered>
+    <reference name="category.products">
+      <action method="unsetChild">
+        <child>product_list</child>
+      </action>
+
+      <block name="mustache.product_list" as="product_list"
+             type="magestache/mustache_template"
+             template="catalog/product/list.mustache">
+
+        <action method="setChild">
+          <alias>product_list.nested</alias>
+          <child>product_list</child>
+        </action>
+
+        <block name="mustache.listed.product"
+               type="magestache/mustache_template"
+               template="catalog/product/listed_product.mustache">
+
+          <action method="setFieldsetName">
+            <fieldsetName>prepare_list_product</fieldsetName>
+          </action>
+        </block>
+
+        <action method="setDataBlock">
+          <block>product_list.nested</block>
+        </action>
+
+        <action method="setFieldsetName">
+          <fieldsetName>catalog_product_list</fieldsetName>
+        </action>
+      </block>
+    </reference>
+  </catalog_category_layered>
+</layout>

@@ -1,0 +1,10 @@
+<theme>
+    <parent>rwd/default</parent>
+    <layout>
+        <updates>
+            <mattwellss_mustache_layout>
+                <file>mustache.xml</file>
+            </mattwellss_mustache_layout>
+        </updates>
+    </layout>
+</theme>

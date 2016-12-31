@@ -7,7 +7,7 @@ var fs = require('fs');
 // var sourcemap = require('gulp-sourcemaps');
 
 gulp.task('build', function () {
-    gulp.src('../example/app.js')
+    gulp.src(__dirname + '/../js/app.js')
         // .pipe(sourcemap.init())
         .pipe(browserify())
         .on('prebundle', function (bundle) {
@@ -16,7 +16,7 @@ gulp.task('build', function () {
         })
         .pipe(uglify())
         // .pipe(sourcemap.write())
-        .pipe(gulp.dest('../example/built'));
+        .pipe(gulp.dest(__dirname + '/../js/built'));
 });
 
 // not exactly functional:

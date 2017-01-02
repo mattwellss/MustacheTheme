@@ -176,6 +176,16 @@ aws4@^1.2.1:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.5.0.tgz#0a29ffb79c31c9e712eeb087e8e7a64b4a56d755"
 
+backbone.marionette@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/backbone.marionette/-/backbone.marionette-3.1.0.tgz#0bacee64945eb4deb303e9285ee8c18fd58324a3"
+  dependencies:
+    backbone.radio "^2.0.0"
+
+backbone.radio@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/backbone.radio/-/backbone.radio-2.0.0.tgz#bbe8672b373e313f99f36d2fbcf583fe77d04f42"
+
 backbone@^1.3.3:
   version "1.3.3"
   resolved "https://registry.yarnpkg.com/backbone/-/backbone-1.3.3.tgz#4cc80ea7cb1631ac474889ce40f2f8bc683b2999"
@@ -1555,6 +1565,10 @@ jodid25519@^1.0.0:
   resolved "https://registry.yarnpkg.com/jodid25519/-/jodid25519-1.0.2.tgz#06d4912255093419477d425633606e0e90782967"
   dependencies:
     jsbn "~0.1.0"
+
+jquery@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.1.1.tgz#347c1c21c7e004115e0a4da32cece041fad3c8a3"
 
 jsbn@~0.1.0:
   version "0.1.0"

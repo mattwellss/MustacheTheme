@@ -1,5 +1,5 @@
-var Product = require('./Product');
-var ProductList = require('./ProductList');
+const Product = require('./Product');
+const ProductList = require('./ProductList');
 
 function getProduct(id) {
     var data = {
@@ -19,7 +19,7 @@ function getProduct(id) {
     return new Product(data);
 }
 
-var products = new ProductList([
+const products = new ProductList([
     getProduct(1),
     getProduct(2),
     getProduct(3),

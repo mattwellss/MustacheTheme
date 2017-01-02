@@ -1,21 +1,16 @@
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var browserify = require('gulp-browserify');
-var hogan = require('hogan.js');
-var glob = require('glob');
-var fs = require('fs');
-// var sourcemap = require('gulp-sourcemaps');
+const gulp = require('gulp');
+const uglify = require('gulp-uglify');
+const browserify = require('gulp-browserify');
+const fs = require('fs');
+const sourcemap = require('gulp-sourcemaps');
 
 gulp.task('build', function () {
     gulp.src(__dirname + '/../js/app.js')
-        // .pipe(sourcemap.init())
-        .pipe(browserify())
-        .on('prebundle', function (bundle) {
-            bundle.transform('brfs');
-            bundle.external('jquery');
-        })
-        .pipe(uglify())
-        // .pipe(sourcemap.write())
+        .pipe(sourcemap.init())
+            .pipe(browserify())
+                .on('prebundle', bundle => bundle.transform('brfs')/*.external('jquery')*/)
+            .pipe(uglify())
+        .pipe(sourcemap.write())
         .pipe(gulp.dest(__dirname + '/../js/built'));
 });
 

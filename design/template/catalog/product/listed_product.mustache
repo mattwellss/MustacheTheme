@@ -1,44 +1,42 @@
 {{%MAGENTO-TEMPLATE}}
 {{%IMPLICIT-ITERATOR}}
-<li class="item">
-    <a href="{{product_link}}" class="product-image">
-        <img src="{{img_src}}" id="product-collection-image-{{id}}"/>
-    </a>
-    <div class="product-info">
-        <h2 class="product-name">
-            <a href="{{product_link}}" title="{{#stripTags}}{{name}}{{/stripTags}}">{{name}}</a>
-        </h2>
-        {{#name_after_htmls}}
-            {{{.}}}
-        {{/name_after_htmls}}
+<a href="{{product_link}}" class="product-image">
+    <img src="{{img_src}}" id="product-collection-image-{{id}}"/>
+</a>
+<div class="product-info">
+    <h2 class="product-name">
+        <a href="{{product_link}}" title="{{#stripTags}}{{name}}{{/stripTags}}">{{name}}</a>
+    </h2>
+    {{#name_after_htmls}}
+        {{{.}}}
+    {{/name_after_htmls}}
 
-        {{{price_html}}}
+    {{{price_html}}}
 
-        {{#has_rating_summary}}
-            {{{rating_summary_html}}}
-        {{/has_rating_summary}}
+    {{#has_rating_summary}}
+        {{{rating_summary_html}}}
+    {{/has_rating_summary}}
 
-        <div class="actions">
-            {{#configurable}}
-                {{#salable}}
-                    <button class="button btn-cart" type="button"
-                            title="{{#quoteEscape}}Add to Cart{{/quoteEscape}}">
-                        {{#__}}Add to Cart{{/__}}
-                    </button>
-                {{/salable}}
-            {{/configurable}}
-            <ul class="add-to-links">
-                {{#wishlist_add_url}}
-                    <li><a href="{{wishlist_add_url}}" class="link-wishlist">
-                        {{#__}}Add to Wishlist{{/__}}
-                    </a></li>
-                {{/wishlist_add_url}}
-                {{#compare_add_url}}
-                    <li><a href="{{compare_add_url}}" class="link-compare">
-                        {{#__}}Add to Compare{{/__}}
-                    </a></li>
-                {{/compare_add_url}}
-            </ul>
-        </div>
+    <div class="actions">
+        {{#configurable}}
+            {{#salable}}
+                <button class="button btn-cart" type="button"
+                        title="{{#quoteEscape}}Add to Cart{{/quoteEscape}}">
+                    {{#__}}Add to Cart{{/__}}
+                </button>
+            {{/salable}}
+        {{/configurable}}
+        <ul class="add-to-links">
+            {{#wishlist_add_url}}
+                <li><a href="{{wishlist_add_url}}" class="link-wishlist">
+                    {{#__}}Add to Wishlist{{/__}}
+                </a></li>
+            {{/wishlist_add_url}}
+            {{#compare_add_url}}
+                <li><a href="{{compare_add_url}}" class="link-compare">
+                    {{#__}}Add to Compare{{/__}}
+                </a></li>
+            {{/compare_add_url}}
+        </ul>
     </div>
-</li>
+</div>

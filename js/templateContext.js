@@ -1,6 +1,4 @@
-const Backbone = require('backbone');
-
-module.exports = Backbone.Model.extend({
+module.exports = {
     __: function () {
         return function (text) {
             return text;
@@ -16,4 +14,4 @@ module.exports = Backbone.Model.extend({
             return text;
         }
     }
-});
+};

@@ -1,16 +1,16 @@
-const ProductList = require('./ProductListView');
-const products = require('./fakedata');
-const jQuery = require('jquery');
+var ProductList = require('./ProductListView');
+var products = require('./fakedata');
+var jQuery = require('jquery');
 require('backbone').$ = jQuery;
+var Mustache = require('mustache');
 
 require('backbone.marionette').Renderer.render = function (template, data) {
-    return template.render(data);
+    return Mustache.render(template, data);
 };
-
-jQuery(function () {
-    const pl = new ProductList({
-        collection: products,
-        el: document.querySelector('.products-grid')
-    });
-    pl.render();
+console.time('start');
+var pl = new ProductList({
+    collection: products,
+    el: document.querySelector('.products-grid'),
 });
+pl.render();
+console.timeEnd('start');

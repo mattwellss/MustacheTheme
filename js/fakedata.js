@@ -1,6 +1,4 @@
-const Product = require('./Product');
-const ProductList = require('./ProductList');
-
+var Backbone = require('backbone');
 function getProduct(id) {
     var data = {
         "sku": "mtk000c",
@@ -16,10 +14,10 @@ function getProduct(id) {
         "wishlist_add_url": "http://127.0.0.1:8080/wishlist/index/add/product/"+id+"/form_key/pSNv59aD5zYvOYyR/?___SID=U",
         "compare_add_url": "http://127.0.0.1:8080/catalog/product_compare/add/product/"+id+"/uenc/aHR0cDovLzEyNy4wLjAuMTo4MDgwL21lbi90ZWVzLWtuaXRzLWFuZC1wb2xvcy5odG1s/form_key/pSNv59aD5zYvOYyR/?___SID=U"
     };
-    return new Product(data);
+    return new Backbone.Model(data);
 }
 
-const products = new ProductList([
+var products = new Backbone.Collection([
     getProduct(1),
     getProduct(2),
     getProduct(3),

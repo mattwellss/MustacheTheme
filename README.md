@@ -11,6 +11,6 @@ Run `composer require mattwellss/mustache-theme` in your Magento app's root (or 
 In the `frontend` folder is a work-in-progress JS frontend. To see what's (possibly) planned, do the following:
 
 * `yarn install` (get [yarn](https://yarnpkg.com/en/docs/install) first, of course)
-* `php -S 127.0.0.1:8000 -t js js/index.php`
+* `webpack-dev-server`
   * N.B. the `fakedata.js` data points to images available at `127.0.0.1:8080`. This probably won't work for you.
-  * Also, be sure to run the parent command from the project's root directory!
+  * This generates the bundle using webpack and hosts it at localhost:8000

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+</head>
+<body>
+<div class="category-products">
+    <ul class="products-grid"></ul>
+</div>
+<script>
+    function templateRegistry (name) {
+        var templates = {'catalog/product/listed_product.mustache':
+            '{{%MAGENTO-TEMPLATE}}\n{{%IMPLICIT-ITERATOR}}\n<a href="{{product_link}}" class="product-image">\n    <img src="{{img_src}}" id="product-collection-image-{{id}}"/>\n</a>\n<div class="product-info">\n    <h2 class="product-name">\n        <a href="{{product_link}}" title="{{#stripTags}}{{name}}{{/stripTags}}">{{name}}</a>\n    </h2>\n    {{#name_after_htmls}}\n        {{{.}}}\n    {{/name_after_htmls}}\n\n    {{{price_html}}}\n\n    {{#has_rating_summary}}\n        {{{rating_summary_html}}}\n    {{/has_rating_summary}}\n\n    <div class="actions">\n        {{#configurable}}\n            {{#salable}}\n                <button class="button btn-cart" type="button"\n                        title="{{#quoteEscape}}Add to Cart{{/quoteEscape}}">\n                    {{#__}}Add to Cart{{/__}}\n                </button>\n            {{/salable}}\n        {{/configurable}}\n        <ul class="add-to-links">\n            {{#wishlist_add_url}}\n                <li><a href="{{wishlist_add_url}}" class="link-wishlist">\n                    {{#__}}Add to Wishlist{{/__}}\n                </a></li>\n            {{/wishlist_add_url}}\n            {{#compare_add_url}}\n                <li><a href="{{compare_add_url}}" class="link-compare">\n                    {{#__}}Add to Compare{{/__}}\n                </a></li>\n            {{/compare_add_url}}\n        </ul>\n    </div>\n</div>'};
+        return templates[name];
+    };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js"></script>
+<script src="/built/app.js"></script>
+</body>
+</html>

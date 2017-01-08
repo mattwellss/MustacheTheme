@@ -1,4 +1,9 @@
 <layout>
+  <default>
+    <reference name="before_body_end">
+      <block type="magestache/mustache_template_registry" name="magestache.template.registry" />
+    </reference>
+  </default>
   <catalog_category_layered>
     <reference name="category.products">
       <action method="unsetChild">
@@ -21,6 +26,8 @@
           <action method="setFieldsetName">
             <fieldsetName>prepare_list_product</fieldsetName>
           </action>
+
+          <action method="flagForRegistry" />
         </block>
 
         <action method="setDataBlock">

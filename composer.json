@@ -10,7 +10,8 @@
         }
     ],
     "require": {
-        "magento-hackathon/magento-composer-installer": "*"
+        "magento-hackathon/magento-composer-installer": "*",
+        "mattwellss/magestache": "*"
     },
     "suggest": {
         "mattwellss/magento-composer-autoloader": "To support namespace-autoloading"

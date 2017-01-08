@@ -1,6 +1,7 @@
-var Backbone = require('backbone');
+import { Model, Collection } from 'backbone';
+
 function getProduct(id) {
-    var data = {
+    let data = {
         "sku": "mtk000c",
         "name": "A Product!",
         "id": id,
@@ -14,15 +15,13 @@ function getProduct(id) {
         "wishlist_add_url": "http://127.0.0.1:8080/wishlist/index/add/product/"+id+"/form_key/pSNv59aD5zYvOYyR/?___SID=U",
         "compare_add_url": "http://127.0.0.1:8080/catalog/product_compare/add/product/"+id+"/uenc/aHR0cDovLzEyNy4wLjAuMTo4MDgwL21lbi90ZWVzLWtuaXRzLWFuZC1wb2xvcy5odG1s/form_key/pSNv59aD5zYvOYyR/?___SID=U"
     };
-    return new Backbone.Model(data);
+    return new Model(data);
 }
 
-var products = new Backbone.Collection([
+export default new Collection([
     getProduct(1),
     getProduct(2),
     getProduct(3),
     getProduct(4),
     getProduct(5)
 ]);
-
-module.exports = products;

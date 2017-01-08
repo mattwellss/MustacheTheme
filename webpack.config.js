@@ -10,12 +10,17 @@ module.exports = {
         path: path.join(jsPath, 'built')
     },
     externals: {
-        'jquery': 'jQuery',
-        './templateRegistry': 'templateRegistry'
+        'jquery': 'jQuery'
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin
+        // new webpack.optimize.UglifyJsPlugin
     ],
+    devtool: 'source-map',
+    module: {
+        loaders: [
+            { test: /\.ts$/, loader: 'awesome-typescript-loader' }
+        ]
+    },
     devServer: {
         contentBase: jsPath,
         compress: true,

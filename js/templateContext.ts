@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     __: function () {
         return function (text) {
             return text;

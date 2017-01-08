@@ -12,5 +12,5 @@ In the `frontend` folder is a work-in-progress JS frontend. To see what's (possi
 
 * `yarn install` (get [yarn](https://yarnpkg.com/en/docs/install) first, of course)
 * `webpack-dev-server`
-  * N.B. the `fakedata.js` data points to images available at `127.0.0.1:8080`. This probably won't work for you.
+  * N.B. the `fakedata.ts` data points to images available at `127.0.0.1:8080`. This probably won't work for you.
   * This generates the bundle using webpack and hosts it at localhost:8000

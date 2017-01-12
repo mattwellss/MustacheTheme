@@ -1,12 +1,12 @@
 {
     "compilerOptions": {
-        "outDir": "./js/built/",
+        "outDir": "./mustachetheme/built/",
         "sourceMap": true,
         "noImplicitAny": true,
         "module": "commonjs",
-        "target": "es5",
+        "target": "es5"
     },
     "include": [
-        "./js/*.ts"
+        "./mustachetheme/*.ts", "./node_modules/mustachetheme/*.ts"
     ]
 }

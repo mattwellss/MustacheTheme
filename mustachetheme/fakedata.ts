@@ -18,10 +18,14 @@ function getProduct(id) {
     return new Model(data);
 }
 
-export default new Collection([
+let addProduct = (coll: Collection<Model>) => coll.add(getProduct(coll.length + 1));
+let removeProduct = (coll: Collection<Model>) => coll.remove(getProduct(coll.length));
+
+let products = new Collection([
     getProduct(1),
-    getProduct(2),
-    getProduct(3),
-    getProduct(4),
-    getProduct(5)
 ]);
+
+export { products };
+export { addProduct };
+export { removeProduct };
+

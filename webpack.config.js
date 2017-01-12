@@ -1,13 +1,13 @@
-const path = require('path');
+const join = require('path').join;
 const webpack = require('webpack');
 
-const jsPath = path.join(__dirname, 'js');
+const codePath = join(__dirname, 'mustachetheme');
 
 module.exports = {
-    entry: './js/app.js',
+    entry: './mustachetheme/app.ts',
     output: {
         filename: 'app.js',
-        path: path.join(jsPath, 'built')
+        path: join(codePath, 'built')
     },
     externals: {
         'jquery': 'jQuery'
@@ -15,14 +15,17 @@ module.exports = {
     plugins: [
         // new webpack.optimize.UglifyJsPlugin
     ],
-    devtool: 'source-map',
+    resolve: {
+        extensions: ['.webpack.js', '.web.js', '.ts', '.js']
+    },
+    // devtool: 'source-map',
     module: {
         loaders: [
             { test: /\.ts$/, loader: 'awesome-typescript-loader' }
         ]
     },
     devServer: {
-        contentBase: jsPath,
+        contentBase: codePath,
         compress: true,
         port: 8000
     }

@@ -27,8 +27,7 @@
             ["mattwellss_mustache_theme.xml", "app/etc/mattwellss_mustache_theme.xml"],
             ["mustachetheme/*", "../node_modules/mustachetheme/"],
             ["package.json", "../node_modules/mustachetheme/package.json"],
-            ["webpack.config.js", "../node_modules/mustachetheme/webpack.config.js"],
-            ["tsconfig.json", "../node_modules/mustachetheme/tsconfig.json"]
+            ["webpack.config.js", "../node_modules/mustachetheme/webpack.config.js"]
         ]
     }
 }

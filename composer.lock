@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "69a32b38cbe756d52684f518f45715c2",
+    "content-hash": "09766231d06bb34224ccb47c14e47269",
     "packages": [
         {
             "name": "eloquent/composer-config-reader",
@@ -175,6 +175,52 @@
             "time": "2016-12-22T16:43:46+00:00"
         },
         {
+            "name": "koala-framework/composer-extra-assets",
+            "version": "v2.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/koala-framework/composer-extra-assets.git",
+                "reference": "8421543ac20ee59f5171e7b36a8830b7070a57cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/koala-framework/composer-extra-assets/zipball/8421543ac20ee59f5171e7b36a8830b7070a57cb",
+                "reference": "8421543ac20ee59f5171e7b36a8830b7070a57cb",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "mouf/nodejs-installer": ">=1.0.2 <2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.5.*"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Kwf\\ComposerExtraAssets\\Plugin",
+                "mouf": {
+                    "nodejs": {
+                        "version": ">=0.10"
+                    }
+                },
+                "branch-alias": {
+                    "dev-master": "1.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kwf\\ComposerExtraAssets\\": "Kwf/ComposerExtraAssets"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "description": "Composer Plugin for installing Assets using native npm/bower",
+            "homepage": "https://github.com/koala-framework/composer-extra-assets",
+            "time": "2016-09-07T08:58:41+00:00"
+        },
+        {
             "name": "magento-hackathon/magento-composer-installer",
             "version": "3.0.7",
             "source": {
@@ -256,6 +302,147 @@
                 "magento"
             ],
             "time": "2016-08-29T20:34:08+00:00"
+        },
+        {
+            "name": "mattwellss/magestache",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../mustachetest",
+                "reference": "472fc6d1e4018ad44f9ad56d354e9f5f8058ae28",
+                "shasum": null
+            },
+            "require": {
+                "phly/phly-mustache": "^2.0"
+            },
+            "suggest": {
+                "mattwellss/magento-composer-autoloader": "To support autoloading with namespaces. However, any composer-based autoloading should work fine."
+            },
+            "type": "magento-module",
+            "extra": {
+                "map": [
+                    [
+                        "MattWellss_MageStache.xml",
+                        "app/etc/modules/MattWellss_MageStache.xml"
+                    ],
+                    [
+                        "MattWellss/MageStache/*",
+                        "app/code/community/MattWellss/MageStache"
+                    ]
+                ]
+            },
+            "autoload": {
+                "psr-0": {
+                    "MattWellss\\MageStache": "."
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Mustache for Magento 1"
+        },
+        {
+            "name": "mouf/nodejs-installer",
+            "version": "v1.0.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thecodingmachine/nodejs-installer.git",
+                "reference": "8e995c32384c329593159ec924276364ae5f5071"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thecodingmachine/nodejs-installer/zipball/8e995c32384c329593159ec924276364ae5f5071",
+                "reference": "8e995c32384c329593159ec924276364ae5f5071",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0.0",
+                "ext-openssl": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "composer/composer": "*"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": [
+                    "Mouf\\NodeJsInstaller\\NodeJsPlugin"
+                ],
+                "mouf": {
+                    "logo": "node-js.png"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mouf\\NodeJsInstaller\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Négrier",
+                    "email": "d.negrier@thecodingmachine.com",
+                    "homepage": "http://mouf-php.com"
+                }
+            ],
+            "description": "An installer package that let's you install NodeJS and NPM as a Composer dependency.",
+            "homepage": "http://mouf-php.com/packages/mouf/nodejs-installer",
+            "keywords": [
+                "installer",
+                "nodejs",
+                "npm"
+            ],
+            "time": "2016-11-17T08:47:39+00:00"
+        },
+        {
+            "name": "phly/phly-mustache",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phly/phly-mustache.git",
+                "reference": "4850537fc135fbf894f4c9377876a817f3a451ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phly/phly-mustache/zipball/4850537fc135fbf894f4c9377876a817f3a451ff",
+                "reference": "4850537fc135fbf894f4c9377876a817f3a451ff",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "zendframework/zend-escaper": "^2.5",
+                "zendframework/zend-stdlib": "^2.6 || ^3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "squizlabs/php_codesniffer": "^2.3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Phly\\Mustache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Weier O'Phinney",
+                    "email": "matthew@weierophinney.net",
+                    "homepage": "https://mwop.net/"
+                }
+            ],
+            "description": "PHP Mustache implementation supporting inheritance",
+            "homepage": "http://phly-mustache.readthedocs.org",
+            "keywords": [
+                "mustache"
+            ],
+            "time": "2016-07-02T22:16:05+00:00"
         },
         {
             "name": "psr/log",
@@ -482,12 +669,103 @@
                 "shim"
             ],
             "time": "2016-11-14T01:06:16+00:00"
+        },
+        {
+            "name": "zendframework/zend-escaper",
+            "version": "2.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-escaper.git",
+                "reference": "2dcd14b61a72d8b8e27d579c6344e12c26141d4e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-escaper/zipball/2dcd14b61a72d8b8e27d579c6344e12c26141d4e",
+                "reference": "2dcd14b61a72d8b8e27d579c6344e12c26141d4e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5"
+            },
+            "require-dev": {
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev",
+                    "dev-develop": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Escaper\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-escaper",
+            "keywords": [
+                "escaper",
+                "zf2"
+            ],
+            "time": "2016-06-30T19:48:38+00:00"
+        },
+        {
+            "name": "zendframework/zend-stdlib",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-stdlib.git",
+                "reference": "debedcfc373a293f9250cc9aa03cf121428c8e78"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-stdlib/zipball/debedcfc373a293f9250cc9aa03cf121428c8e78",
+                "reference": "debedcfc373a293f9250cc9aa03cf121428c8e78",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "athletic/athletic": "~0.1",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "^2.6.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.1-dev",
+                    "dev-develop": "3.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Zend\\Stdlib\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "homepage": "https://github.com/zendframework/zend-stdlib",
+            "keywords": [
+                "stdlib",
+                "zf2"
+            ],
+            "time": "2016-09-13T14:38:50+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "mattwellss/magestache": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

@@ -3,3 +3,7 @@ vendor
 node_modules/*
 !node_modules/mustachetheme
 .DS_Store
+package.json
+bower.json
+.bowerrc
+root

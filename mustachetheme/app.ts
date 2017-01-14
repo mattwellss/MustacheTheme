@@ -1,8 +1,8 @@
-import ProductListView from 'mustachetheme/ProductListView';
+import ProductListView from './ProductListView';
 import {products, addProduct, removeProduct} from './fakedata';
 import {Renderer} from 'backbone.marionette';
 import Mustache = require('mustache');
-import templateRegistry from 'mustachetheme/templateRegistry';
+import templateRegistry from './templateRegistry';
 
 Renderer.render = function (template, data) {
     return Mustache.render(template, data);

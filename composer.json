@@ -33,8 +33,7 @@
             ["design/*", "app/design/frontend/mattwellss/mustache/"],
             ["mattwellss_mustache_theme.xml", "app/etc/mattwellss_mustache_theme.xml"],
             ["mustachetheme/*", "../node_modules/mustachetheme/"],
-            ["package.json", "../node_modules/mustachetheme/package.json"],
-            ["webpack.config.js", "../node_modules/mustachetheme/webpack.config.js"]
+            ["node_modules/*", "../node_modules/"]
         ],
         "require-npm": {
             "@types/backbone": "^1.3.33",
